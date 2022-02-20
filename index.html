@@ -18,21 +18,42 @@
         padding:0px;
         color:azure;
         background:url('./images/codebg.png');
-        /**/
+        background-repeat:no-repeat;
+        background-size: cover;/*it covers entire screen*/
+        
         
         
     }
+    .myheader
+    {
+        display:flex;
+        align-items: center;
+        position:relative;
+        
+        
+    }
+    .myheader::before{
+        content:"";
+        background-color: black;
+        position:absolute;
+        width:100%;
+        height:100%;
+        z-index:-1;
+        opacity:0.4;
+
+    }
+   
     .left
     {
         position:absolute;
         left:50px;
-        top:20px;
+        top:10px;
         display:inline-block;
        /* border:2px solid red;*/
     }
     .left img
     {
-        width:65px;
+        width:50px;
         
     }
     .left div{
@@ -44,7 +65,7 @@
     {
         display:block;
         width:40%;
-        margin:18px auto;
+        margin:5px auto;
         /* border:2px solid red;*/
 
     }
@@ -63,14 +84,16 @@
     }*/
     .navbar
     {
-        display:flex;
-        flex-wrap: wrap;        
+        /*display:flex;
+        list-style-type: none;   
+        flex-wrap: wrap; */
+        flex:1;
+        text-align: right;       
     }
     .navbar li
     {
         display:inline-block;
-       
-        
+        list-style: none;  
     }
     .navbar li a{
         color:white;
@@ -86,7 +109,7 @@
     {
         margin:0px 9px;
         font-family: 'Baloo Bhaina 2', cursive;
-        background-color: black;
+        background: linear-gradient(135deg,#71b7e6,#4456bd);
         color:white;
         padding:3px 12px;
         border:2px solid grey;
@@ -106,12 +129,31 @@
         width:28%;
         border-radius:8px;
     }
+    @media only screen and (max-width:700px)
+    {
+        .center ul{
+            width:100%;
+            position:absolute;
+            top:75px;
+            z-index:2;
+        }
+        .center ul li{
+            display:block;
+            margin-top: 10px;
+            margin-bottom: 10px;       
+
+        }
+        .center ul li a{
+            color:red;
+        }
+
+    }
 </style>
 <body>
-    <header class="header">
+    <header class="myheader">
         <div class="left">
-            <img src="./images/iktechlogo.jpg">
-            <div>IIK Academy</div>
+            <img src="./images/iktechlogo.jpg" alt="IIK Academy">
+            <div></div>
         
         </div>
         <div class="center">
@@ -133,5 +175,10 @@
        <h2>Join IIK Academy to become Itian</h2>
     </div>
     -->
+    <div class="row">
+        <div class="col-1">
+             
+        </div>
+    </div>
 </body>
 </html>
